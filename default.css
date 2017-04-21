@@ -177,13 +177,19 @@ nav>div li:nth-child(7) {
 	width: 45.5%;
 	float: left;
 	position: relative;
-	margin-bottom: 10px;
-	
+	margin-bottom: 10px;	
 }
 #contact form textarea {
 	display: block;
 	width: 98%;
 	padding-right: 0;
+}
+@media(max-width: 1000px) {
+	#contact form input:nth-child(3), #contact form input:nth-child(4), #contact form input:nth-child(5), #contact form textarea {
+		width: 98%;
+		margin-right: 0;
+		padding-right: 0;
+	}
 }
 #contact form button {
 	background-color: #ff6200;

@@ -1,9 +1,10 @@
 var body = document.body,
-	nav = document.querySelector('nav ul')
-
+	nav = document.querySelector('nav ul'),
+	burger = document.querySelector('#burger');
+debugger
 
 nav.addEventListener('click', drop, false)
-
+burger.addEventListener('click', burger)
 
 function clear(e, t) {
 	var tabs = document.querySelectorAll('.drop, .drop2');
@@ -50,4 +51,9 @@ function drop(e) {
 	}
 
 	e.stopPropagation();
+}
+
+
+function burger(e) {
+	debugger
 }
