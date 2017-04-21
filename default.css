@@ -51,6 +51,13 @@ header {
 #account span:nth-child(2) {
 	color: white;
 }
+#burger {
+	display: none;
+	width: 55px;
+	position: relative;
+	top: -20px;
+	right: 20px;
+}
 nav {
 	background-color: #f9f9f9;
 	list-style: none;
@@ -58,6 +65,9 @@ nav {
 	padding-top: 35px;
 	padding-bottom: 50px;
 	clear: both;
+}
+nav>div {
+	display: 
 }
 nav>div a, nav>div ul {
 	display: inline;
@@ -67,6 +77,16 @@ nav>div ul {
 	position: relative;
 	top: -25px;
 }
+@media (max-width: 825px) {
+  nav>div ul {
+    display: none;
+  }
+  #burger {
+  	display: inline;
+  	float: right;
+  }
+}
+
 nav>div li {
 	display: inline;
 	padding-right: 10px;

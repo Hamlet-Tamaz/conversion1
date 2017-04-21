@@ -1,48 +1,53 @@
-var body = document.body;
-var nav = document.querySelector('nav ul')
+var body = document.body,
+	nav = document.querySelector('nav ul')
 
 
-// nav.addEventListener('mouseover', hover)
-// nav.addEventListener('mouseout', hoverStop)
+nav.addEventListener('click', drop, false)
 
-body.addEventListener('click', clear)
 
-function clear(e) {
-	var tabs = document.querySelectorAll('.drop, .drop2')
-	debugger
+function clear(e, t) {
+	var tabs = document.querySelectorAll('.drop, .drop2');
+	// var drops = document.querySelectorAll('nav ul div');
+
+	var inTabs = false,
+		disp = false;
+
+	var inNav = nav.contains(e.target)
+
 
 	tabs.forEach(function(el, i) {
-		el.style.display = 'none';
+		if (el.contains(e.target)) {
+			inTabs = true;
+		}
+		if (el.style.display != '' && el.style.display != 'none') {
+			disp = true;
+		}
 	})
 
-
+	if ((!inTabs && disp)  ) {
+		tabs.forEach(function(el, i) {
+			el.style.display = 'none';
+		})	
+	}
 }
 
 
 
-nav.addEventListener('click', drop, true)
-
 function drop(e) {
-	var drop = e.target.nextElementSibling;
-	var tabs = document.querySelectorAll('.drop, .drop2');
-	debugger
-	if (!nav.contains(e.target)  ) {
-		debugger
-		clear(this);
-	}
+	var drop = e.target.nextElementSibling,
+		tabs = document.querySelectorAll('.drop, .drop2');
 
 	if (e.target.nodeName == "A") {	
 		if (drop.style.display=='block') {
 			drop.style.display = 'none';
+			body.removeEventListener('click', clear);
 		}
 		else {
-			drop.style.display = 'block';		
+			body.addEventListener('click', clear, false);
+			clear(e, this);
+			drop.style.display = 'block';	
 		}
 	}
-	else {
-		tabs.forEach(function(el, i) {
-			el.style.display = 'none';
-		})
-	}
 
+	e.stopPropagation();
 }
