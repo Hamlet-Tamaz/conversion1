@@ -1,14 +1,17 @@
 var body = document.body,
 	nav = document.querySelector('nav ul'),
 	burger = document.querySelector('#burger');
-debugger
 
-nav.addEventListener('click', drop, false)
-burger.addEventListener('click', burger)
+
+nav.addEventListener('click', drop);
+
+burger.addEventListener('click', function(e) {
+	nav.style.display != 'inline-block' ?  nav.style.display = 'inline-block' : nav.style.display = 'none';
+});
+
 
 function clear(e, t) {
 	var tabs = document.querySelectorAll('.drop, .drop2');
-	// var drops = document.querySelectorAll('nav ul div');
 
 	var inTabs = false,
 		disp = false;
@@ -44,7 +47,7 @@ function drop(e) {
 			body.removeEventListener('click', clear);
 		}
 		else {
-			body.addEventListener('click', clear, false);
+			body.addEventListener('click', clear);
 			clear(e, this);
 			drop.style.display = 'block';	
 		}
@@ -54,6 +57,3 @@ function drop(e) {
 }
 
 
-function burger(e) {
-	debugger
-}

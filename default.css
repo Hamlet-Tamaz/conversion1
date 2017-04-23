@@ -4,7 +4,6 @@ body {
 	padding: 5px;
 	color: #aaaaaa;
 	font-family: Ubuntu;
-	font-weight: light;
 }
 h1 {
 
@@ -66,9 +65,9 @@ nav {
 	padding-bottom: 50px;
 	clear: both;
 }
-nav>div {
+/*nav>div {
 	display: 
-}
+}*/
 nav>div a, nav>div ul {
 	display: inline;
 }
@@ -76,9 +75,10 @@ nav>div ul {
 	float: right;
 	position: relative;
 	top: -25px;
+	z-index: 99;
 }
 @media (max-width: 825px) {
-  nav>div ul {
+  nav>div>ul {
     display: none;
   }
   #burger {
@@ -101,7 +101,7 @@ nav>div li a:hover {
 	font-weight: bold; 
 }
 nav>div li:nth-child(7) {
-	padding-right: 73px;
+	padding-right: 70px;
 }
 #text, nav>div {
 	max-width: 1000px;
@@ -113,22 +113,28 @@ nav>div li:nth-child(7) {
 	border: black solid 1px;
 	position: absolute;
 	top: 50px;
+	left: 100px;
 	width: 110px;
 	text-align: center;
 	line-height: 20px;
+	background-color: #FFFFFF;
 }
 .drop ul, .drop2 ul {
 	float: none;
 	top: 0;
+	padding: 0px;
 }
 .drop li, .drop2 li {
 	display: block;
+	padding-bottom: 5px
+}
+.drop li:first-child, .drop2 li:first-child {
+	padding-top: 5px;
 }
 .drop2 {
 	position: absolute;
 	left: 110px;
-	top: 0;
-
+	top: 40px;
 }
 #logo {
 	text-decoration: none;
@@ -139,6 +145,10 @@ nav>div li:nth-child(7) {
 #contact {
 	position: relative;
 	top: 70px;
+}
+#contact p span{
+	color: black;
+	font-weight: bold;
 }
 #contact h2 {
 	font-family: 'Open Sans Bold';
