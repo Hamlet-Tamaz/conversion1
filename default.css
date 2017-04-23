@@ -1,5 +1,5 @@
 body {
-	max-width: 1000px;
+	max-width: 960px;
 	margin: 0 auto;
 	padding: 5px;
 	color: #aaaaaa;
@@ -65,9 +65,6 @@ nav {
 	padding-bottom: 50px;
 	clear: both;
 }
-/*nav>div {
-	display: 
-}*/
 nav>div a, nav>div ul {
 	display: inline;
 }
@@ -104,7 +101,7 @@ nav>div li:nth-child(7) {
 	padding-right: 70px;
 }
 #text, nav>div {
-	max-width: 1000px;
+	max-width: 960px;
     margin: 0 auto;
 }
 .drop, .drop2 {
