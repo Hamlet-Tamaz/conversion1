@@ -5,9 +5,6 @@ body {
 	color: #aaaaaa;
 	font-family: Ubuntu;
 }
-h1 {
-
-}
 h2 {
 	color: #ff6200;
 	font-family: 'Open Sans';
@@ -23,19 +20,18 @@ header {
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 100px;
-	clear: both;
 }
 #top {
 	background-color: #ff6200;
 	width: 100%;
-	height: auto;
-	padding: 5px;
+	height: 30px;
+	padding: 7px 0 3px 0;
 	margin: 0 auto;
 }
 #top a {
 	color: #c23900;
 	text-decoration: none;
+	font-size: 120%;
 }
 #top a span {
 	color: white;
@@ -57,12 +53,15 @@ header {
 	top: -20px;
 	right: 20px;
 }
+#burger:hover {
+	cursor: pointer;
+}
 nav {
 	background-color: #f9f9f9;
 	list-style: none;
 	padding: 5px;
-	padding-top: 35px;
-	padding-bottom: 50px;
+	padding-top: 65px;
+	padding-bottom: 65px;
 	clear: both;
 }
 nav>div a, nav>div ul {
@@ -102,7 +101,10 @@ nav>div li:nth-child(7) {
 }
 #text, nav>div {
 	max-width: 960px;
-    margin: 0 auto;
+  margin: 0 auto;
+}
+#text {
+	padding: 0 5px 0 5px;
 }
 .drop, .drop2 {
 	display: none;
@@ -137,26 +139,22 @@ nav>div li:nth-child(7) {
 	text-decoration: none;
 	float: left;
 	position: relative;
-	top: -20px;
+	top: -30px;
+}
+#logo>img{	
+	width: 70%;
 }
 #contact {
 	position: relative;
-	top: 70px;
+	top: 200px;
 }
 #contact p span{
 	color: black;
 	font-weight: bold;
 }
-#contact h2 {
-	font-family: 'Open Sans Bold';
-
-}
 #contactus, #reachus {
 	display: inline-block;
 	float: left;
-}
-#contactus h2, #reachus h2 {
-	font-family: 'Open Sans';
 }
 #contactus {
 	width: 55%;
